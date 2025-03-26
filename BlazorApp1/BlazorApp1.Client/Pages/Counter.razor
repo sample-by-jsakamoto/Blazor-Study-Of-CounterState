@@ -1,0 +1,13 @@
+﻿@page "/counter"
+@rendermode InteractiveAuto
+@inject CounterService CounterService
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @CounterService.CurrentCount</p>
+
+<button class="btn btn-primary" @onclick="CounterService.IncrementCount">Click me</button>
+
+<p>(Interactive Mode: @this.RendererInfo.Name)</p>
